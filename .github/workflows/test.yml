@@ -4,10 +4,10 @@ name: test
 
 # Controls when the workflow will run
 on: 
-  push:
-  schedule:
-    - cron: '0/5 * * * *' #cada 5 minutos
-
+  # push:
+  # schedule:
+  #   - cron: '0/5 * * * *' #cada 5 minutos
+  workflow_dispatch: # disparo manual
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
