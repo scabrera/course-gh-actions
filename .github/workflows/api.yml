@@ -1,0 +1,19 @@
+name: api
+on:
+  push:
+    paths:
+      - '.github/workflows/api.yml'
+      - 'api/**'
+  workflow_dispatch: # disparo manual
+
+jobs:
+  build:
+    name: build-dotnet-api
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: dotnet --list-runtimes
+      - run: dotnet --list-sdks
+      - run: dotnet build
+        working-directory: ./api
+    
